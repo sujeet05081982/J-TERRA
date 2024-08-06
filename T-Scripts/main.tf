@@ -128,7 +128,7 @@ output "server-ip" {
 }
 
 resource "aws_instance" "myapp-server" {
-  ami                         = data.aws_ami.amazon-linux-image.id
+  ami                         = "ami-04a81a99f5ec58529"
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.ssh-key.key_name
   associate_public_ip_address = true
